@@ -33,6 +33,10 @@ public class Habitacion {
                 case "Sencilla":
                     habitaciones.add(new HabitacionSencilla(Integer.parseInt(arrHab[4].trim()), arrHab[3], Integer.parseInt(arrHab[2].trim()), arrHab[0], arrHab[1]));
                     break;
+                
+                case "Estudio":
+                    habitaciones.add(new HabitacionEstudio(Integer.parseInt(arrHab[4].trim()), arrHab[3], Integer.parseInt(arrHab[2].trim()), arrHab[0], arrHab[1], Integer.parseInt(arrHab[5].trim())));
+                    break;
             }
         }
         
@@ -44,7 +48,7 @@ public class Habitacion {
     }
     
     public String getDetalle() {
-        return "Codigo Habitacion: "+codigoHab+", Tipo: "+tipoHab;
+        return "Habitación: "+codigoHab;
     }
     
 }

@@ -12,7 +12,13 @@ package hotel;
 public class HabitacionEstudio extends HabitacionSencilla {
     int nSofaCama;
 
-    public HabitacionEstudio(int nroCamas, String tipoCama, int nroBano, String codigoHab, String tipoHab) {
+    public HabitacionEstudio(int nroCamas, String tipoCama, int nroBano, String codigoHab, String tipoHab, int nSofaCama) {
         super(nroCamas, tipoCama, nroBano, codigoHab, tipoHab);
+        this.nSofaCama = nSofaCama;
+    }
+    
+    @Override
+    public String getDetalle(){
+        return "Habitación "+codigoHab;
     }
 }

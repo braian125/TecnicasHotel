@@ -20,11 +20,12 @@ public class Hotel {
     public static void main(String[] args) throws FileNotFoundException {
         // TODO code application logic here
         
-        Habitacion hab = new Habitacion();
+        /*Habitacion hab = new Habitacion();
         ArrayList<Habitacion> habitaciones = hab.getHabitaciones();
         for(Habitacion habitacion: habitaciones) {
             System.out.println(habitacion.getDetalle());
-        }
+        }*/
+       
             
     }
     

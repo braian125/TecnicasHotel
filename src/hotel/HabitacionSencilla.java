@@ -37,6 +37,6 @@ public class HabitacionSencilla extends Habitacion {
     
     @Override
     public String getDetalle(){
-        return "Codigo Habitacion "+codigoHab+"Tipo de Cama"+tipoCama;
+        return "Habitación "+codigoHab;
     }
 }

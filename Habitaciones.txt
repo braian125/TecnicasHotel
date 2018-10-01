@@ -1,1 +1,2 @@
 101 | Sencilla | 1 | Simple | 1
+102 | Estudio | 1 | Simple | 1 | 2
