@@ -10,5 +10,7 @@ package hotel;
  * @author Brian Vanegas
  */
 public class HabitacionMatrimonial extends HabitacionDoble {
-    String tipoCama;//cama doble, queen o king
+    public HabitacionMatrimonial(int nroCamas, String tipoCama, int nroBano, String codigoHab, String tipoHab) {
+        super(nroCamas, tipoCama, nroBano, codigoHab, tipoHab);
+    }
 }

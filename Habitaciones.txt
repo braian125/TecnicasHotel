@@ -1,2 +1,5 @@
-101 | Sencilla | 1 | Simple | 1
-102 | Estudio | 1 | Simple | 1 | 2
+101 | Sencilla | 1 | Simple | 1 | 0 | 0
+102 | Estudio | 1 | Simple | 1 | 1 | 0
+103 | Doble | 2 | Individual | 1 | 0 | 0
+104 | Matrimonial | 2 | Matrimonial QUEEN | 1 | 0 | 0
+105 | Suite Junior | 2 | Individual | 2 | 0 | 1 

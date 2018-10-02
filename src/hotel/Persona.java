@@ -13,9 +13,12 @@ import java.util.ArrayList;
  * @author Brian Vanegas
  */
 public class Persona {
+
     private String identificacion;
     private String nombres;
     private String ciudad;
+    private static final String FILE = "Personas.txt";
+    private ArrayList<Persona> personas = new ArrayList<Persona>();
 
     public Persona(String identificacion, String nombres, String ciudad) {
         this.identificacion = identificacion;
@@ -23,14 +26,14 @@ public class Persona {
         this.ciudad = ciudad;
     }
     
-    public Persona() throws FileNotFoundException {
+    public Persona() {
         FileHelper file = new FileHelper();
-        ArrayList lines = file.FileHelper("Personas.txt");
+        ArrayList lines  = file.FileHelper(FILE);
         
-        /*for(Object line : lines){
-            System.out.println(line);
-            String [] persona  = line.split("\\|");
-        }*/
+        for(Object line : lines) {
+            String[] persona = String.valueOf(line).split("\\|");
+            personas.add(new Persona(persona[0].trim(), persona[1].trim(), persona[2].trim()));
+        }
     }
 
     public String getCiudad() {
@@ -56,6 +59,17 @@ public class Persona {
     public void setNombres(String nombres) {
         this.nombres = nombres;
     }
+
+    public ArrayList<Persona> getPersonas() {
+        return personas;
+    }
     
+    public String getFILE() {
+        return FILE;
+    }
     
+    @Override
+    public String toString() {
+        return this.identificacion + " | " + this.nombres + " | " + this.ciudad;
+    }
 }

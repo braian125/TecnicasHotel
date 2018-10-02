@@ -6,6 +6,8 @@
 package hotel;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,5 +34,19 @@ public class FileHelper {
             System.out.println("Hay un problema:" + e);
         }
         return lines;
+    }
+    
+    public boolean ActualizarArchivo(ArrayList personas, String fileName) throws FileNotFoundException, IOException {
+        FileOutputStream fout = new FileOutputStream(fileName);
+        
+        try {
+            for(Object persona : personas){
+                fout.write(persona.toString().getBytes());
+                fout.write('\n');
+            }
+            return true;
+        } catch(FileNotFoundException ex){
+            return false;
+        }
     }
 }

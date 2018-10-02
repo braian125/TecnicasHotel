@@ -19,6 +19,6 @@ public class HabitacionEstudio extends HabitacionSencilla {
     
     @Override
     public String getDetalle(){
-        return "Habitación "+codigoHab;
+        return "Habitación "+getCodigoHab();
     }
 }
